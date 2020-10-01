@@ -4,10 +4,12 @@
   --basic-darker-grey: #293449;
   --basic-dark-grey: #32425C;
   --basic-white: #FFFFFF;
+  --basic-hover-white: rgba(255, 255, 255, 0.5);
   --basic-red: #EE3643;
   --basic-hover-red:#CA2C37;
   --basic-focus-red: #BA2732;
   --basic-black: #000000;
+  --basic-shadow-black: rgba(0, 0, 0, 0.24);
   --basic-green: #63A63E;
   --hover-green: #5FBB2D;
   --clicked-green: #63A63E;
@@ -21,32 +23,47 @@
   --basic-grey-grey: #B7BFC8;
   --basic-price-grey: #A9A9A9;
   --basic-main-grey: #F1F5F7;
+  --basic-active-grey: rgba(241,245,247,.5);
   --basic-yellow: #FFD180;
+  --basic-active-yellow: rgba(255,209,128,.5);
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-purple: #DC91D8;
   --special-green:  #8ED78F;
   --special-orange: #FFC047;
+  --special-white: rgba(255,255,255,.3);
+  --special-hover-grey: rgba(197,197,197,.3);
+  --special-active-grey: rgba(169,169,169,.3);
+  --box-shadow-green: #367315;
 }
 
-/* Global */
-
 body {
-    min-width: 1200px;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: "Cuprum", sans-serif;;
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Cuprum", "Arial", sans-serif;;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-li {
-    list-style: none;
+.button {
+  text-transform: uppercase;
+  line-height: 18px;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.button:hover {
+  background-color: var(--basic-hover-red);
+}
+
+.button:active {
+  background-color: var(--basic-focus-red);
 }
 
 /* Header  */
@@ -66,12 +83,12 @@ li {
 
 .header-logo {
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--basic-shadow-black);
 }
 
-.header-logo:focus {
+.header-logo:active {
   background-color: var(--basic-focus-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--basic-shadow-black);
 }
 
 .header-bookmark {
@@ -85,9 +102,9 @@ li {
   background-color: var(--basic-darker-grey);
 }
 
-.header-bookmark:focus {
+.header-bookmark:active {
   background-color: var(--basic-focus-black);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--basic-hover-white);
 }
 
 .header-cart {
@@ -101,8 +118,8 @@ li {
   background-color: var(--basic-darker-grey);
 }
 
-.header-cart:focus {
-  color: rgba(255, 255, 255, 0.5);
+.header-cart:active {
+  color: var(--basic-hover-white);
 }
 
 .header-order {
@@ -116,8 +133,9 @@ li {
   background-color: var( --hover-green);
 }
 
-.header-order:focus {
+.header-order:active {
   background-color: var(--clicked-green);
+  color: var(--basic-hover-white);
 }
 
 .slogan {
@@ -158,8 +176,8 @@ li {
   color: var(--basic-red);
 }
 
-.user-login:focus,
-.user-registr:focus {
+.user-login:active,
+.user-registr:active {
   color: var(--basic-hover-grey);
 }
 
@@ -167,23 +185,26 @@ li {
 
 .site-nav {
   background-color: var(--basic-dark-grey);
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px var(--basic-darker-grey);
 }
 
-.site-nave-list a {
+.site-nav-list {
+  list-style: none;
+}
+
+.site-nav-list a {
   vertical-align: middle;
   text-align: center;
   font-size: 18px;
   color: var(--basic-white); 
-}
+} 
 
-.site-nave-list a:hover {
+.site-nav-list a:hover {
   background-color: var(--basic-darker-grey);
 }
 
-.site-nave-list a:focus {
-  color: var(--basic-white);
-  opacity: .5;
+.site-nav-list a:active {
+  color: var(--basic-hover-white);
   background-color: var(--basic-darker-grey);
 }
 
@@ -247,18 +268,16 @@ h1 {
 }
 
 .button-materials {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--special-white);
   color: var(--basic-white);
 }
 
 .button-materials:hover {
-  background-color: rgba(197, 197, 197, 1);
-  opacity: .3;
+  background-color: var(--special-hover-grey);
 }
 
-.button-materials:focus {
-  background-color:rgba(169, 169, 169, 1);
-  opacity: .3;
+.button-materials:active {
+  background-color: var(--special-active-grey);
 }
 
 /* Slides */
@@ -278,23 +297,6 @@ h1 {
   font-size: 18px;
 }
 
-
-.button {
-  text-transform: uppercase;
-  line-height: 18px;
-  background-color: var(--basic-red);
-  color: var(--basic-white);
-  
-}
-
-.catalog:hover {
-  background-color: var(--basic-hover-red);
-}
-
-.catalog:focus {
-  background-color: var(--basic-focus-red);
-}
-
 /* Popular Goods  */
 
 .goods-title {
@@ -309,10 +311,10 @@ h1 {
 }
 
 .goods-list {
-  font-family: "PT Sans", "san-serif";
+  font-family: "PT Sans", "Arial", "san-serif";
 }
 
-.goods-item  {
+.goods-item {
   border: 1px solid var(--basic-lighter-grey);
 }
 
@@ -325,13 +327,13 @@ h1 {
 
 .goods-price1 {
   color: var(--basic-price-grey);
-  font-size:17px;
+  font-size: 17px;
   line-height: 18px;
   font-weight: 700px;
 }
 
 .goods-price2 {
-  font-size:17px;
+  font-size: 17px;
   line-height: 18px;
   font-weight: 700px;
   color: var(--basic-white);
@@ -347,12 +349,12 @@ h1 {
 
 .goods-buy {
   background-color: var(--basic-green);
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0px -3px 0px var(--box-shadow-green);
   border-radius: 2px;
   color: var(--basic-white);
 }
 
-.goods-bookmark{
+.goods-bookmark {
   background-color: var(--basic-white);
   color: var(--basic-dark-grey);
   border: 2px solid var(--basic-green);
@@ -365,6 +367,10 @@ h1 {
   background-color: var(--basic-main-grey);   
 }
 
+.service-items {
+  list-style: none;
+}
+
 .title,
 .deliveries h2 {
   font-size: 30px;
@@ -374,7 +380,7 @@ h1 {
 }
 
 .description {
-  font-family: "PT Sans", "san-serif";
+  font-family: "PT Sans", "Arial", "san-serif";
   font-size: 13px;
 }
 
@@ -382,37 +388,39 @@ h1 {
   color: var(--basic-dark-grey);
 }
 
-
-.items-delivery,
-.items-warranty,
-.items-credit {
+.slider-toggler {
   font-size: 21px;
   font-weight: 700;
   line-height: 30px;
-  box-shadow: 0px 1px 0px #FFFFFF;
+  box-shadow: 0px 1px 0px var(--basic-white);
   background-color: var(--basic-dark-grey);
   color: var(--basic-white);
 }
 
-.items-delivery:hover,
-.items-warranty:hover,
-.items-credit:hover {
+.slider-toggler:hover {
   background-color: var(--basic-darker-grey);
   color: var(--basic-white);
 }
 
-.items-delivery:focus,
-.items-warranty:focus,
-.items-credit:focus {
+.items-credit:active {
   background-color: var(--basic-white);
   color: var(--basic-dark-grey);
 }
 
 /* About Company  */
 
-.company-list li {
+.company-list {
   font-size: 18px;
   line-height: 24px;
+  list-style: none;
+}
+
+.button-about {
+  /* width: 220px; */
+}
+
+.button-contact {
+  /* width: 300px; */
 }
 
 /* Footer */
@@ -423,45 +431,52 @@ h1 {
 
 .footer-logo {
   background-color: var(--basic-focus-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--basic-shadow-black); 
 }
 
-.footer-address,
+.footer-contacts p, a,
+.list-nav1 {
+  color: var(--basic-main-grey);
+}
+
+/* .footer-address,
 .footer-phone,
-.list-item1,
-.list-item2 {
+.list-nav1 a {
   color: var(--basic-white);
+} */
+
+.list-nav2 a {
+  color: var(--basic-yellow);
 }
 
 .footer-address,
 .footer-phone,
-.list {
+.list a {
   font-size: 18px;
   line-height: 24px;
 }
 
-.list-item2  {
-  color: var(--basic-yellow);
+.list {
+  list-style: none;
 }
 
-.list:hover {
+.list a:hover {
   text-decoration: underline;
 }
 
-.list-item1:focus {
-  color: var(--basic-main-grey);
-  opacity: 0.5;
-  text-decoration:none;
+.list-nav1 a:active {
+  color: var(--basic-active-grey);
+  text-decoration: none;
+
 }
 
-.list-item2:focus {
-  color: var(--basic-yellow);
-  opacity: 0.5;
-  text-decoration:none;
+.list-nav2 a:active {
+  color: var(--basic-active-yellow);
+  text-decoration: none;
 }
 
 .footer-second {
-  background-color:var(--basic-darker-grey);
+  background-color: var(--basic-darker-grey);
 }
 
 .footer-contacts {
@@ -484,7 +499,7 @@ h1 {
 }
 
 .icon:hover,
-.icon:focus {
+.icon:active {
   color: var(--basic-white);
   background-color: var(--basic-focus-red);
 }
@@ -497,7 +512,7 @@ h1 {
   text-decoration: underline;
 }
 
-.footer-link:focus {
+.footer-link:active {
   color: var(--basic-red);
   text-decoration: none;
 }
