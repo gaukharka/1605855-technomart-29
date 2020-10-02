@@ -12,6 +12,7 @@
   --basic-shadow-black: rgba(0, 0, 0, 0.24);
   --basic-green: #63A63E;
   --hover-green: #5FBB2D;
+  --active-green: #518534;
   --clicked-green: #63A63E;
   --basic-hover-grey: #C5C5C5;
   --basic-lighter-grey: #EAEAEA;
@@ -35,6 +36,7 @@
   --special-hover-grey: rgba(197,197,197,.3);
   --special-active-grey: rgba(169,169,169,.3);
   --box-shadow-green: #367315;
+  --special-black: rgba(0,0,0,.3);
 }
 
 body {
@@ -277,7 +279,7 @@ h1 {
 }
 
 .button-materials:active {
-  background-color: var(--special-active-grey);
+  background-color: var(--basic-dark-grey);
 }
 
 /* Slides */
@@ -299,7 +301,9 @@ h1 {
 
 /* Popular Goods  */
 
-.goods-title {
+.goods-title,
+.goods-filter,
+.goods-sorting {
   background-color: var(--basic-light-rose);
 }
 
@@ -351,7 +355,16 @@ h1 {
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--box-shadow-green);
   border-radius: 2px;
+  box-sizing: border-box;
   color: var(--basic-white);
+}
+
+.goods-buy:hover {
+  background-color: var(--hover-green);
+}
+
+.goods-buy:active {
+  background-color: var(--active-green);
 }
 
 .goods-bookmark {
@@ -359,7 +372,32 @@ h1 {
   color: var(--basic-dark-grey);
   border: 2px solid var(--basic-green);
   box-sizing: border-box;
+  border-radius: 2px;
 }
+
+.goods-bookmark:hover {
+  border: 2px solid var(--basic-dark-grey);
+}
+
+.goods-bookmark:active {
+  border: 2px solid var(--basic-dark-grey);
+  color: var(--basic-dark-grey);
+}
+
+/* Producer Logo */
+
+/* .producer-logo a {
+  border: 1px solid var(--basic-lighter-grey);
+  box-sizing: border-box;
+}
+
+.producer-logo a:hover {
+  box-shadow: 0 0 10px 10px var(--basic-lighter-grey);
+}
+
+.producer-logo a:active {
+
+} */
 
 /* Services */
 
@@ -467,7 +505,6 @@ h1 {
 .list-nav1 a:active {
   color: var(--basic-active-grey);
   text-decoration: none;
-
 }
 
 .list-nav2 a:active {
@@ -517,9 +554,134 @@ h1 {
   text-decoration: none;
 }
 
+/* Catalog  */
 
+/* User  */
 
+.user-profile {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+}
 
+.user-profile:hover {
+  color: var(--basic-red);
+}
 
+.user-profile:active {
+  /* color: var(--basic-hover-grey); */
+  color: var(--special-hover-grey);
+}
 
+.user-order-cabinet {
+  list-style: none;
+}
 
+/* .user-profile-logo,
+.user-exit {
+  
+}
+
+.user-profile-logo:hover,
+.user-exit {
+  
+}
+
+.user-profile-logo:active,
+.user-exit:active {
+  
+} */
+
+.order-cabinet {
+  color: var(--basic-dark-grey);
+}
+
+.order-cabinet:hover {
+  color: var(--basic-red);
+}
+
+.order-cabinet:active {
+  color: var(--special-hover-grey);
+}
+
+/* Bread crumbs */
+
+.breadcrumbs-list,
+.sorting-list,
+.sorting-button {
+  list-style: none;
+}
+
+.breadcrumbs-list a,
+.goods-filter p,
+.goods-sorting p {
+  font-family: "PT Sans", "Arial", "san-serif";
+  color: var(--basic-black);
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+} 
+
+.sorting-list a {
+  font-family: "PT Sans", "Arial", "san-serif";
+  color: var(--special-black);
+  font-size: 13px;
+  line-height: 18px;
+  border-bottom: dotted 1px var(--basic-red);
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.sorting-list a:hover {
+  color: var(--basic-black);
+  border-bottom: solid 1px var(--basic-red);
+  padding-bottom: 2px;
+}
+
+.sorting-list a:active {
+  color: var(--basic-red);
+  border: none;
+}
+
+.sorting-list-current a {
+  color: var(--basic-red);
+  border: none;
+}
+
+.title-name h2 {
+  background-color: var(--basic-light-blue);
+}
+
+/* Pagination  */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-button-grey);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.pagination-item a:hover {
+  border: 1px solid var(--basic-hover-grey);
+  background-color: var(--basic-white);
+}
+
+.pagination-item a:active {
+  border: 1px solid var(--basic-red);
+}
+
+.pagination-item-current a {
+  background-color: var(--basic-red);
+  border: 1px solid var(--basic-red);
+}
