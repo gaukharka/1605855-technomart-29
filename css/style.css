@@ -333,13 +333,13 @@ h1 {
   color: var(--basic-price-grey);
   font-size: 17px;
   line-height: 18px;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 .goods-price2 {
   font-size: 17px;
   line-height: 18px;
-  font-weight: 700px;
+  font-weight: 700;
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
@@ -579,6 +579,8 @@ h1 {
 
 .user-order-cabinet {
   list-style: none;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 /* .user-profile-logo,
