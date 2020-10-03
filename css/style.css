@@ -53,6 +53,16 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px var(--basic-shadow-black);
+}
+
+.logo:active {
+  background-color: var(--basic-focus-red);
+  box-shadow: inset 0px -5px 0px var(--basic-shadow-black);
+}
+
 .button {
   text-transform: uppercase;
   line-height: 18px;
@@ -84,13 +94,7 @@ a {
 }
 
 .header-logo {
-  background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px var(--basic-shadow-black);
-}
-
-.header-logo:active {
-  background-color: var(--basic-focus-red);
-  box-shadow: inset 0px -5px 0px var(--basic-shadow-black);
+  
 }
 
 .header-bookmark {
@@ -334,6 +338,7 @@ h1 {
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
+  text-decoration-line: line-through;
 }
 
 .goods-price2 {
@@ -468,8 +473,7 @@ h1 {
 }
 
 .footer-logo {
-  background-color: var(--basic-focus-red);
-  box-shadow: inset 0px -5px 0px var(--basic-shadow-black); 
+ 
 }
 
 .footer-contacts p, a,
