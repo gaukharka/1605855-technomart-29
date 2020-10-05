@@ -168,13 +168,14 @@ a {
 
 .user-login,
 .user-registr {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   text-align: center;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   border: 2px solid var(--basic-white);
+  margin-right: 10px;
 }
 
 .user-login:hover,
@@ -532,11 +533,14 @@ h1 {
   color: var(--basic-white);
 }
 
+.icon {
+  /* background: linear-gradient(0deg, #212A3A, #212A3A); */
+}
+
 .icon-vk,
 .icon-fb,
 .icon-in {
-  color: var(--basic-white);
-  background-color: var(--basic-darker-grey);
+  /* background-color: var(--basic-darker-grey); */
 }
 
 .icon:hover,
@@ -562,14 +566,20 @@ h1 {
 
 /* User  */
 
+.header-user {
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  width: 299px;
+  height: 45px;
+  text-align: center;
+}
+
 .user-profile {
   vertical-align: middle;
   text-align: center;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  background-color: var(--basic-white);
-  border: 2px solid var(--basic-white);
 }
 
 .user-profile:hover {
@@ -581,7 +591,7 @@ h1 {
   color: var(--special-hover-grey);
 }
 
-.user-order-cabinet {
+.user-order-cabinet-list {
   list-style: none;
   font-size: 16px;
   line-height: 18px;
