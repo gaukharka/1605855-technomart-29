@@ -82,6 +82,22 @@ a {
   background-color: var(--basic-focus-red);
 }
 
+/* Content width */
+
+.header-top-wrapper,
+.header-bottom,
+.site-nav,
+.materials,
+.goods,
+.producer, 
+.services-page,
+.company,
+.footer-contacts-wrapper,
+.footer-second-wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
 /* Page Grip */
 
 .page-body {
@@ -108,12 +124,6 @@ a {
 
 /* .header-logo {
 } */
-
-.header-top-wrapper {
-  /* flexbox */
-  width: 940px;
-  margin: 0 auto;
-}
 
 .header-bookmark {
   background-color: var(--basic-darker-grey);
@@ -157,12 +167,6 @@ a {
 }
 
 /* 2nd Header */
-
-.header-bottom {
-  /* flex */
-  width: 940px;
-  margin: 0 auto;
-}
 
 .slogan {
   font-size: 16px;
@@ -217,9 +221,6 @@ a {
 /* Site Navigation */
 
 .site-nav {
-  /* flex */
-  width: 940px;
-  margin: 0 auto;
   background-color: var(--basic-dark-grey);
   box-shadow: inset 0px -5px 0px var(--basic-darker-grey);
 }
@@ -247,11 +248,6 @@ a {
 }
 
 /* Main */
-
-.main-content {
-  width: 940px;
-  margin: 0 auto;
-}
 
 /* Materials */
 
@@ -283,7 +279,6 @@ h1 {
 
 .material {
   background-color: var(--special-yellow);
-  height: 123px;
 }
 
 .instrument {
@@ -321,22 +316,97 @@ h1 {
   grid-column: 1 / 3;
   grid-row: 2 / -1;
   height: 266px;
+  position: relative;
+}
+
+.slides {
+  position: relative;
 }
 
 .slider-item {
-  background-color: grey;
-  /* height: 266px; */
+  position: absolute;
 }
+
+.slider-item.active {
+  background: url("../img/slider-photo.jpg");
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+  height: 266px;
+}
+
+.slider-item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slider-control {
+  display: block;
+  margin: 10px 5px;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+}
+
+.slider-control-active {
+  background-color: red;
+}
+
+/* Slider Before-After */
+
+.slider-before-after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 1;
+  bottom: 100px;
+}
+.slider-before {
+  background-image: url("../img/icon-before.svg");
+  padding: 25px 15px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+.slider-after {
+  background-image: url("../img/icon-after.svg");
+  padding: 25px 15px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+/* Slider text */
 
 .slider-item h3 {
   font-size: 36px;
   font-weight: 700;
+  color: var(--basic-white);
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .slider-item p {
   font-size: 18px;
+  color: var(--basic-white);
+  margin: 0;
 }
 
 /* Popular Goods  */
@@ -359,10 +429,9 @@ h1 {
 
 .goods-list {
   font-family: "PT Sans", "Arial", "san-serif";
-  /* grid */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 20px;
+  gap: 20px;
   margin: 20px 0 70px 0;
 }
 
@@ -371,7 +440,6 @@ h1 {
 }
 
 .goods-img {
-  /* flex */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -422,6 +490,8 @@ h1 {
   margin:0 auto;
   text-align: center;
 }
+
+/* Buy-Bookmark */
 
 .goods-buy,
 .goods-bookmark {
@@ -475,7 +545,7 @@ h1 {
   color: var(--basic-dark-grey);
 }
 
-/* Producer Logo */
+/* Popular Producers */
 
 .producer-logo {
   display: grid;
@@ -507,7 +577,6 @@ h1 {
 
 .services {
   background-color: var(--basic-main-grey);
-  height: 522px;
   margin-bottom: 70px;    
 }
 
@@ -577,6 +646,22 @@ h1 {
   color: var(--basic-dark-grey);
 }
 
+/* Delivery-Credit-Warranty  slides*/
+
+.deliveries {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.deliveries-active {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* About Company  */
 
 .company {
@@ -584,8 +669,6 @@ h1 {
   grid-template-columns: 1fr min-content;
   column-gap: 180px;
   padding: 0;
-  margin: 0;
-  height: 426px;
 }
 
 .title-company {
@@ -710,15 +793,13 @@ h1 {
 
 .header-user {
   background-color: var(--basic-white);
-  border: 2px solid var(--basic-white);
+  border: 1px solid var(--basic-white);
   width: 299px;
   height: 45px;
   text-align: center;
 }
 
 .user-profile {
-  vertical-align: middle;
-  text-align: center;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -737,6 +818,8 @@ h1 {
   list-style: none;
   font-size: 16px;
   line-height: 18px;
+  padding:0;
+  margin: 0;
 }
 
 /* .user-profile-logo,
@@ -768,10 +851,16 @@ h1 {
 
 /* Bread crumbs */
 
+/* .title-name h2 {
+  padding: 29px 0 30px 29px;
+} */
+
 .breadcrumbs-list,
 .sorting-list,
 .sorting-button {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .breadcrumbs-list a,
@@ -783,6 +872,8 @@ h1 {
   line-height: 18px;
   text-transform: uppercase;
 } 
+
+/* kak pravilno budet */
 
 .sorting-list a {
   font-family: "PT Sans", "Arial", "san-serif";
