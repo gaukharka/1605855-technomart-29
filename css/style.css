@@ -648,15 +648,22 @@ h1 {
 
 /* Delivery-Credit-Warranty  slides*/
 
-.deliveries {
+.service-options {
+  position: relative;
+}
+
+.deliveries,
+.description {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  opacity: 0;
 }
 
-.deliveries-active {
+.deliveries-active,
+.descriptio-active {
   position: static;
   opacity: 1;
   pointer-events: auto;
