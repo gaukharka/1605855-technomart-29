@@ -12,8 +12,8 @@
 <body class="page-body">
   <header class="header">
     <div class="header-top">
-      <div class="header-top-wrapper">
-        <a class="logo header-logo" href="index.html"><img width="106.83" height="16.9" src="img/header-logo.svg"
+      <div class="container">
+        <a class="logo header-logo" href="index.html"><img width="107" height="17" src="img/header-logo.svg"
             alt="Компания Техномарт"></a>
         <!-- <form action="#" method="POST">
                 <input type="search" placeholder="Поиск:">
@@ -24,16 +24,19 @@
               <path
                 d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
                 fill="white" />
-            </svg>Закладки: 0</a>
-          <a class="header-button header-cart" href="blank.html"><svg width="15" height="11" viewBox="0 0 15 11"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-            </svg>Корзина: 0</a>
+              </svg>Закладки: 0
+          </a>
+          <a class="header-button header-cart" href="blank.html"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+            <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+            <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+            </svg>Корзина: 0
+          </a>
           <a class="header-order" href="blank.html">Оформить заказ</a>
         </div>
       </div>
     </div>
-    <div class="header-bottom">
+    <div class="container">
       <p class="slogan">Интернет-магазин строительных материалови инструментов для ремонта</p>
       <div class="header-contacts">
         <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -51,7 +54,7 @@
         <div class="user-registr"><a href="blank.html">Регистрация</a></div>
       </div>
     </div>
-    <nav class="site-nav">
+    <nav class="site-nav container">
       <ul class="site-nav-list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="blank.html">Компания</a></li>
@@ -66,8 +69,8 @@
 
   <main class="main-content">
     <!-- скрыть в стиле h1 тексты -->
-    <h1>ТЕХНОМАРТ</h1>
-    <section class="materials">
+    <h1 class="visually-hidden">ТЕХНОМАРТ</h1>
+    <section class="materials container">
       <div class="material">
         <h3>Материалы</h3>
         <a class="button-materials" href="blank.html">на любой вкус</a>
@@ -112,7 +115,7 @@
       </div>
     </section>
 
-    <section class="goods">
+    <section class="goods container">
       <div class="goods-title">
         <h2>Популярные товары:</h2>
         <a class="button" href="blank.html">все поПулярные товары</a>
@@ -165,7 +168,7 @@
       </div>
     </section>
 
-    <section class="producer">
+    <section class="producer container">
       <div class="goods-title">
         <h2>Популярные ПРОИзводители:</h2>
         <a class="button" href="blank.html">все производители</a>
@@ -183,7 +186,7 @@
     </section>
 
     <section class="services">
-      <div class="services-page">
+      <div class="container">
         <div class="service-text">
           <h2 class="title title-services">Сервисы</h2>
           <p class="description">
@@ -192,46 +195,44 @@
           </p>
         </div>
         <div class="service-details">
-          <div class="service-list">
-            <ul class="service-items">
-              <li class="slider-toggler-item"><a class="slider-toggler active" href="blank.html">Доставка</a></li>
-              <li class="slider-toggler-item"><a class="slider-toggler" href="blank.html">Гарантия</a></li>
-              <li class="slider-toggler-item"><a class="slider-toggler" href="blank.html">Кредит</a></li>
-            </ul>
-          </div>
+          <ul class="service-items">
+            <li class="slider-toggler-item"><a class="slider-toggler active" href="blank.html">Доставка</a></li>
+            <li class="slider-toggler-item"><a class="slider-toggler" href="blank.html">Гарантия</a></li>
+            <li class="slider-toggler-item"><a class="slider-toggler" href="blank.html">Кредит</a></li>
+          </ul>
           <div class="service-options">
-            <div class="deliveries deliveries-active">
-            <h2>Доставка</h2>
-            <p class="description descriptio-active">
-              Мы с удовольствием доставим ваш товар прямо
-              к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,
-              поднимая его на ваш этаж!
-            </p>
-          </div>
-          <div class="deliveries">
-            <h2>Гарантия</h2>
-            <p class="description">
-              Если купленный у нас товар поломается или 
-              заискрит,  а также в случае пожара, спровоцированного 
-              его возгоранием,  вы всегда можете быть уверены в 
-              нашей гарантии. Мы обменяем сгоревший товар на новый. 
-               Дом уж восстановите как-нибудь сами.
-            </p>
-          </div>
-          <div class="deliveries">
-            <h2>Кредит</h2>
-            <p class="description">
-              Кредит  Залезть в долговую яму стало проще! 
-               Кредитные консультанты придут вам на помощь.
-            </p>
-          </div>
+            <div class="service-option service-option-active">
+              <h2>Доставка</h2>
+              <p>
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж!
+              </p>
+            </div>
+            <div class="service-option">
+              <h2>Гарантия</h2>
+              <p>
+                Если купленный у нас товар поломается или 
+                заискрит,  а также в случае пожара, спровоцированного 
+                его возгоранием,  вы всегда можете быть уверены в 
+                нашей гарантии. Мы обменяем сгоревший товар на новый. 
+                 Дом уж восстановите как-нибудь сами.
+              </p>
+            </div>
+            <div class="service-option">
+              <h2>Кредит</h2>
+              <p>
+                Кредит  Залезть в долговую яму стало проще! 
+                 Кредитные консультанты придут вам на помощь.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="company">
+    <section class="company container">
       <div class="company-about">
         <h2 class="title title-company">КОМПАНИЯ «Техномарт»</h2>
         <p class="description">
@@ -258,7 +259,7 @@
   </main>
 
   <footer class="main-footer">
-    <div class="footer-contacts-wrapper">
+    <div class="container">
       <div class="footer-contacts">
         <a class="logo footer-logo" href="index.html"><img width="136.5" height="21.6" src="img/footer-logo.svg"
             alt="Компания Техномарт"></a>
@@ -282,7 +283,7 @@
       </div>
     </div>
     <div class="footer-second">
-      <div class="footer-second-wrapper">
+      <div class="container">
         <div class="footer-copyright">
           <p>© 2010–2019 Компания «Техномарт»</p>
           <p>Все права защищены</p>
