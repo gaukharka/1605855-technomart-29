@@ -321,13 +321,6 @@ a {
   position: relative;
 }
 
-.goods-cata {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
-}
-
 .slides {
   position: relative;
 }
@@ -898,9 +891,22 @@ a {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  margin: 0;
 } 
 
-/* kak pravilno budet */
+/* Goods catalog - Filter - Sorting */
+
+.catalog-filter-goods {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+}
+
+.goods-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
 
 .sorting-list a {
   font-family: "PT Sans", "Arial", "san-serif";
