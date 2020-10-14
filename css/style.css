@@ -698,24 +698,65 @@ a {
   margin: 0 0 15px 0;
 } 
 
-/* New  */
+.goods-img img {
+  max-width: 100%;
+  height: auto;
+}
 
+/* New Flag */
+
+/* 
 .icon-new::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 151px;
+  width: 300px;
+  height: 150px;
+  background-image: url("/img/rectangle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+} */
+
+/* .icon-new {
+  content: "";
+  position: absolute;
+  top: 100;
+  right: 0;
   width: 150px;
   height: 150px;
   background-image: url("/img/rectangle.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}  */
+
+.goods-img p {
+  position: absolute;
+  line-height: 18px;
+  text-transform: uppercase;
+  /* color: var(--basic-white); */
+  top: 16px;
+  right: 16px;
+  transform: rotate(45deg);
 }
 
-.goods-img img {
-  max-width: 100%;
-  height: auto;
+.goods-text {
+  /* position: absolute; */
+  top: 0px;
+  left: 70px;
+  width: 150px;
+  height: 250px;
+  background-image: url("/img/rectangle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
+
+
+
+
+
+
+
 
 .goods-item-card h3 {
   margin: 0;

@@ -19,14 +19,14 @@
                 <input type="search" placeholder="Поиск:">
             </form> -->
         <div class="user-nav">
-          <a class="header-button header-bookmark" href="blank.html"><svg width="14" height="16" viewBox="0 0 14 16"
+          <a class="header-bookmark" href="blank.html"><svg width="14" height="16" viewBox="0 0 14 16"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
                 fill="white" />
               </svg>Закладки: 0
           </a>
-          <a class="header-button header-cart" href="blank.html"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="header-cart" href="blank.html"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
             <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
             <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="header-middle container">
-      <div><p class="slogan">Интернет-магазин строительных материалови инструментов для ремонта</p></div>
+      <p class="slogan">Интернет-магазин строительных материалови инструментов для ремонта</p>
       <div class="header-contacts">
         <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -56,13 +56,13 @@
     </div>
     <nav class="site-nav container">
       <ul class="site-nav-list">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="blank.html">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="blank.html">Новости</a></li>
-        <li><a href="blank.html">Спецпредложения</a></li>
-        <li><a href="blank.html">Доставка</a></li>
-        <li><a href="blank.html">Контакты</a></li>
+        <li class="site-nav-item"><a href="index.html">Главная</a></li>
+        <li class="site-nav-item"><a href="blank.html">Компания</a></li>
+        <li class="site-nav-item"><a href="catalog.html">Каталог</a></li>
+        <li class="site-nav-item"><a href="blank.html">Новости</a></li>
+        <li class="site-nav-item"><a href="blank.html">Спецпредложения</a></li>
+        <li class="site-nav-item"><a href="blank.html">Доставка</a></li>
+        <li class="site-nav-item"><a href="blank.html">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -73,15 +73,15 @@
     <section class="materials container">
       <div class="material">
         <h3>Материалы</h3>
-        <a class="button-materials" href="blank.html">на любой вкус</a>
+        <a class="button-materials btn-materials" href="blank.html">на любой вкус</a>
       </div>
       <div class="instrument">
         <h3>Инструмент</h3>
-        <a class="button-materials" href="blank.html">НА ВСЕ СЛУЧАИ</a>
+        <a class="button-materials btn-instruments" href="blank.html">НА ВСЕ СЛУЧАИ</a>
       </div>
       <div class="technique">
         <h3>Техника</h3>
-        <a class="button-materials" href="blank.html">ДЛЯ СТРОЙКИ</a>
+        <a class="button-materials btn-techniques" href="blank.html">ДЛЯ СТРОЙКИ</a>
       </div>
       <div class="slider">
         <div class="slides">
@@ -107,11 +107,11 @@
       </div>
       <div class="discount">
         <h3>Скидки 50%</h3>
-        <a class="button-materials" href="blank.html">На 350 ТОВАРОВ</a>
+        <a class="button-materials btn-discounts" href="blank.html">На 350 ТОВАРОВ</a>
       </div>
       <div class="delivery">
         <h3>Доставка</h3>
-        <a class="button-materials" href="blank.html">Бесплатно</a>
+        <a class="button-materials btn-deliveries" href="blank.html">Бесплатно</a>
       </div>
     </section>
 
@@ -122,44 +122,57 @@
       </div>
       <div class="goods-list">
         <div class="goods-item">
-          <div class="goods-img"><img width="184" height="164" src="img/bfg9000.jpg" alt="Перфоратор BOSCH BFG 9000">
+          <div class="goods-item-card">
+            <div class="goods-img">
+              <img width="184" height="164" src="img/bfg9000.jpg" alt="Перфоратор BOSCH BFG 9000">
+            </div>
+            <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 9000</a></h3>
+            <p class="goods-price1">32500 Р.</p>
+            <p class="goods-price2">25500 Р.</p>
           </div>
-          <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 9000</a></h3>
-          <p class="goods-price1">32500 Р.</p>
-          <p class="goods-price2">25500 Р.</p>
           <div class="buy-bookmark">
             <a class="goods-buy" href="blank.html">Купить</a>
             <a class="goods-bookmark" href="blank.html">В закладки</a>
           </div>
         </div>
         <div class="goods-item">
-          <div class="goods-img"><img width="127" height="112" src="img/bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
+          <div class="goods-item-card">
+            <div class="goods-img icon-new">
+              <img width="127" height="112" src="img/bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
+              <p class="goods-text">new</p>
+            </div>
+            <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 3000</a></h3>
+            <p class="goods-price1">22500 Р.</p>
+            <p class="goods-price2">15500 Р.</p>
           </div>
-          <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 3000</a></h3>
-          <p class="goods-price1">22500 Р.</p>
-          <p class="goods-price2">15500 Р.</p>
           <div class="buy-bookmark">
             <a class="goods-buy" href="blank.html">Купить</a>
             <a class="goods-bookmark" href="blank.html">В закладки</a>
           </div>
         </div>
         <div class="goods-item">
-          <div class="goods-img"><img width="144" height="128" src="img/bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
+          <div class="goods-item-card">
+            <div class="goods-img">
+              <img width="144" height="128" src="img/bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
+            </div>
+            <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 6000</a></h3>
+            <p class="goods-price1">30500 Р.</p>
+            <p class="goods-price2">25500 Р.</p>
           </div>
-          <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 6000</a></h3>
-          <p class="goods-price1">30500 Р.</p>
-          <p class="goods-price2">25500 Р.</p>
           <div class="buy-bookmark">
             <a class="goods-buy" href="blank.html">Купить</a>
             <a class="goods-bookmark" href="blank.html">В закладки</a>
           </div>
         </div>
         <div class="goods-item">
-          <div class="goods-img"><img width="127" height="112" src="img/bfg2000.jpg" alt="Перфоратор BOSCH BFG 2000">
+          <div class="goods-item-card">
+            <div class="goods-img">
+              <img width="127" height="112" src="img/bfg2000.jpg" alt="Перфоратор BOSCH BFG 2000">
+            </div>
+            <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 2000</a></h3>
+            <p class="goods-price1">22500 Р.</p>
+            <p class="goods-price2">12500 Р.</p>
           </div>
-          <h3><a class="goods-name" href="#">Перфоратор BOSCH BFG 2000</a></h3>
-          <p class="goods-price1">22500 Р.</p>
-          <p class="goods-price2">12500 Р.</p>
           <div class="buy-bookmark">
             <a class="goods-buy" href="blank.html">Купить</a>
             <a class="goods-bookmark" href="blank.html">В закладки</a>
@@ -203,28 +216,28 @@
           <div class="service-options">
             <div class="service-option service-option-active">
               <h2 class="title-description">Доставка</h2>
-              <p>
+              <p class="delivery-text">
                 Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем,
+                к вашему подъезду совершенно бесплатно! <br>
+                Ведь мы неплохо заработаем, <br>
                 поднимая его на ваш этаж!
               </p>
             </div>
             <div class="service-option">
               <h2 class="title-description">Гарантия</h2>
-              <p>
+              <p class="delivery-text">
                 Если купленный у нас товар поломается или 
-                заискрит,  а также в случае пожара, спровоцированного 
+                заискрит, а также в случае пожара, спровоцированного 
                 его возгоранием,  вы всегда можете быть уверены в 
                 нашей гарантии. Мы обменяем сгоревший товар на новый. 
-                 Дом уж восстановите как-нибудь сами.
+                Дом уж восстановите как-нибудь сами.
               </p>
             </div>
             <div class="service-option">
               <h2 class="title-description">Кредит</h2>
-              <p>
-                Кредит  Залезть в долговую яму стало проще! 
-                 Кредитные консультанты придут вам на помощь.
+              <p class="delivery-text">
+                КредитЗалезть в долговую яму стало проще! 
+                Кредитные консультанты придут вам на помощь.
               </p>
             </div>
           </div>
