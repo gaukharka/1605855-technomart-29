@@ -1083,7 +1083,7 @@ a {
   position: relative;
 }
 
-.list-line-decor:before {
+.list-line-decor::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -1291,8 +1291,7 @@ a {
   background-color: var(--basic-white);
   border: 1px solid var(--basic-white);
   width: 299px;
-  padding-top: 12px;
-  padding: 12px;
+  padding: 12px 0;
   text-align: center;
   margin-bottom: 7px;
 }
@@ -1308,9 +1307,46 @@ a {
 }
 
 .user-profile:active {
-  /* color: var(--basic-hover-grey); */
   color: var(--special-hover-grey);
 }
+
+/* User Profile Icon */
+
+.user-profile svg {
+  margin-right: 21px;
+  position: relative;
+  top: 2px;
+}
+
+.header-user svg:hover path {
+  fill: var(--special-icon-darkblue);
+}
+
+.user-profile:hover path {
+  fill: var(--special-icon-darkblue);
+}
+
+.user-profile:active path {
+  fill: var(--basic-hover-grey);
+}
+
+/* User Exit Icon  */
+
+.user-exit svg {
+  margin-left: 21px;
+  position: relative;
+  top: 2px;
+}
+
+.user-exit:hover path {
+  fill: var(--special-icon-darkblue);
+}
+
+.user-exit svg:active path {
+  fill: var(--basic-hover-grey);
+}
+
+/* Order - Cabinet Icons */
 
 .user-order-cabinet-list {
   list-style: none;
@@ -1319,34 +1355,39 @@ a {
   padding:0;
   margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
-
-/* .user-profile-logo,
-.user-exit {
-  
-}
-
-.user-profile-logo:hover,
-.user-exit {
-  
-}
-
-.user-profile-logo:active,
-.user-exit:active {
-  
-} */
 
 .order-cabinet {
   color: var(--basic-dark-grey);
+}
+
+.order-cabinet::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: var(--special-icon-darkblue);
+  display:inline-block;
+  margin: 0 15px 2px 15px;
 }
 
 .order-cabinet:hover {
   color: var(--basic-red);
 }
 
+.order-cabinet:hover::after {
+  background: var(--basic-red);
+}
+
 .order-cabinet:active {
   color: var(--special-hover-grey);
+}
+
+.button-none::after {
+  display: none;
 }
 
 /* Bread crumbs */
@@ -1363,12 +1404,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: ;
   margin-bottom: 20px;
 }
 
-.breadcrumbs-list a {
-  padding-right: 20px;
+.breadcrumbs-list li:first-child {
+  margin-right: 55px;
+}
+
+.breadcrumbs-list li {
+  margin-right: 42px;
 }
 
 .breadcrumbs-list a,
@@ -1380,6 +1424,40 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   margin: 0;
+} 
+
+/* Breadcrumbs Icons */
+
+.breadcrumbs .breadcrumbs-list {
+  position: relative;
+} 
+
+.home-link::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 12px;
+  top: 5px;
+  left: 0;
+  background-image: url(../img/icon-home.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs-list .breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 12px;
+  top: 6px;
+  left: -22px;
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 } 
 
 /* Goods catalog - Filter - Sorting */
@@ -1447,6 +1525,57 @@ a {
   border: none;
 }
 
+/* Sorting Up Icon */
+
+.sorting-button {
+  position: relative;
+}
+
+.sorting-button-up {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: -5px;
+  right: 48px;
+  background-image: url("../img/icon-sorting.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.sorting-button-up:hover {
+  background-image: url("../img/icon-sorting-hover.svg");
+}
+
+.current-button,
+.sorting-button-up:active {
+  background-image: url("../img/icon-sorting-active.svg");
+}
+
+/* Sorting Down Icon */
+
+.sorting-button-down {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: -5px;
+  right: 16px;
+  background-image: url("../img/icon-sorting.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: rotate(180deg);
+}
+
+.sorting-button-down:hover {
+  background-image: url("../img/icon-sorting-hover.svg");
+}
+
+.sorting-button-down:active {
+  background-image: url("../img/icon-sorting-active.svg");
+}
+
+
 .title-name {
   margin-bottom: 20px;
 }
@@ -1498,6 +1627,11 @@ a {
 }
 
 .pagination-item-current a {
+  background-color: var(--basic-red);
+  border: 1px solid var(--basic-red);
+}
+
+.pagination-item-current a:hover {
   background-color: var(--basic-red);
   border: 1px solid var(--basic-red);
 }
