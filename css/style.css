@@ -166,6 +166,12 @@ a {
   display: inline-block;
 }
 
+/* Catalog Bookmark  */
+
+.catalog-bookmark {
+  
+}
+
 /* Bookmark Icon */
 
 .header-bookmark svg {
@@ -189,7 +195,7 @@ a {
 .header-cart {
   background-color: var(--basic-darker-grey);
   border: none;
-  padding: 9px 21px 9px 25px;
+  padding: 9px 26px 9px 26px;
   display: inline-block;
 }
 
@@ -210,10 +216,11 @@ a {
   opacity: 0.3;
 }
 
-/* Catalog header */
+/* Catalog Cart */
 
 .catalog-header-cart {
   background-color: var(--basic-red);
+  padding: 9px 26px 9px 12px;
 }
 
 .catalog-header-cart:hover {
@@ -303,37 +310,40 @@ a {
   align-items: center;
 }
 
-.user-login a,
-.user-registr a {
+.user-login,
+.user-registr {
   display: inline-block;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   border: 1px solid var(--basic-white);
+}
+
+.user-login {
+  padding: 12px 27px 12px 0;
+}
+
+.user-registr {
+  padding: 12px 24px;
   margin-left: 10px;
 }
 
-.user-login a:hover,
-.user-registr a:hover {
+.user-login:hover,
+.user-registr:hover {
   color: var(--basic-red);
 }
 
-.user-login a:active,
-.user-registr a:active {
+.user-login:active,
+.user-registr:active {
   color: var(--basic-hover-grey);
 }
 
-.user-login a {
-  padding: 12px 27px 12px 19px;
-}
-
-.user-registr a {
-  padding: 12px 24px;
-}
+/* User Login Icon */
 
 .user-login svg {
-  margin-right: 7px;
+  margin:0;
+  padding-left: 19px;
   position: relative;
   top: 2px;
 }
@@ -534,7 +544,7 @@ a {
 }
 
 .button-materials:active {
-  background-color: var(--basic-price-grey);
+  background-color: var(--special-active-grey);
 }
 
 /* Slides */
@@ -1027,7 +1037,7 @@ a {
   right: 0;
   width: 468px;
   height: 261px;
-  background-image: url("../img/delivery.svg");
+  background-image: url("../img/service-delivery.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1383,9 +1393,12 @@ a {
 }
 
 .order-cabinet:active {
-  color: var(--special-hover-grey);
+  color: var(--basic-hover-grey);
 }
 
+.order-cabinet:active::after {
+  background: var(--basic-hover-grey);
+}
 .button-none::after {
   display: none;
 }
