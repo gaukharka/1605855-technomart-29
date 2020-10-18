@@ -321,7 +321,7 @@ a {
 }
 
 .user-login {
-  padding: 12px 27px 12px 0;
+  padding: 12px 27px 12px 19px;
 }
 
 .user-registr {
@@ -343,7 +343,6 @@ a {
 
 .user-login svg {
   margin:0;
-  padding-left: 19px;
   position: relative;
   top: 2px;
 }
@@ -1030,14 +1029,38 @@ a {
   margin: 0;
 }
 
-.service-option-active .delivery-text::after {
+.service-option-active .delivery-icon::after {
   content: "";
   position: absolute;
   bottom: 4px;
   right: 0;
   width: 468px;
   height: 261px;
-  background-image: url("../img/service-delivery.svg");
+  background-image: url("../img/service-delivery.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.service-option .warranty-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/service-warranty.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.service-option .credit-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/service-credit.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1660,4 +1683,3 @@ a {
 .about-goods p {
   padding-bottom: 68px;
 }
-
