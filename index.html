@@ -218,16 +218,16 @@
           <div class="service-options">
             <div class="service-option service-option-active">
               <h2 class="title-description">Доставка</h2>
-              <p class="delivery-text delivery-icon">
-                Мы с удовольствием доставим ваш товар прямо
+              <p class="delivery-text">
+                Мы с удовольствием доставим ваш товар прямо 
                 к вашему подъезду совершенно бесплатно! <br>
                 Ведь мы неплохо заработаем, <br>
                 поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="service-option">
+            <div class="service-option warranty-icon">
               <h2 class="title-description">Гарантия</h2>
-              <p class="delivery-text warranty-icon">
+              <p class="delivery-text">
                 Если купленный у нас товар поломается или 
                 заискрит, а также в случае пожара, спровоцированного 
                 его возгоранием,  вы всегда можете быть уверены в 
@@ -235,9 +235,9 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </div>
-            <div class="service-option">
+            <div class="service-option credit-icon">
               <h2 class="title-description">Кредит</h2>
-              <p class="delivery-text service-credit">
+              <p class="delivery-text">
                 КредитЗалезть в долговую яму стало проще! 
                 Кредитные консультанты придут вам на помощь.
               </p>
@@ -267,7 +267,7 @@
       <div class="company-contacts">
         <h2 class="title title-company">КОНТАКТЫ</h2>
         <p class="description description-company">Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a class="map" href="#"><img src="img/map.png" alt="Адрес офиса Техномарт"></a>
+        <a class="map" href="#"><img src="img/map.png" alt="Адрес офиса Техномарт: ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
         <a class="button button-contact" href="blank.html">Заблудились? НапиШИТЕ НАМ!</a>
       </div>
     </section>
@@ -335,6 +335,31 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-contact">
+    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="contact-name-email">
+        <label class="contact-description" for="name-contact">Ваше имя: <br>
+          <input type="text" name="firstname" id="name-contact" placeholder="Имя Фамилия">
+        </label>
+        <label class="contact-description" for="email-contact">Ваш e-mail: <br>
+          <input type="text" name="email" id="email-contact" placeholder="email@example.com">
+        </label>
+      </div>
+        <label class="contact-description" for="subject-contact">Текст письма: <br>
+          <textarea class="contact-description text-area" id="subject-contact" name="subject" placeholder="В свободной форме" style="height:114px"></textarea>
+        </label>
+    </form>
+    <div class="contact-submit-button">
+        <input class="modal-submit" type="submit" value="Отправить">
+      </div>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+
+  <section class="modal modal-map">
+    <img src="../img/modal-map.png" width="943" height="449" alt="Адрес офиса Техномарт:ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section> 
 </body>
 
 </html>
