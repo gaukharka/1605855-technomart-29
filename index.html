@@ -11,11 +11,18 @@
   <header class="header">
     <div class="header-top">
       <div class="container top-header">
-        <a class="logo header-logo" href="index.html"><img width="107" height="17" src="img/header-logo.svg"
+        <div class="logo-and-search">
+          <a class="logo header-logo" href="index.html"><img width="107" height="17" src="img/header-logo.svg"
             alt="Компания Техномарт"></a>
-            <!-- <form action="#" method="POST">
-                <input type="search" placeholder="Поиск:">
-            </form> -->
+        <form class="search-form" action="#" method="POST">
+          <label class="search-label">
+            <input class="search-input" id="search-field" type="search" placeholder="Поиск:">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="currentColor"/>
+              </svg> 
+          </label>         
+        </form>
+        </div>
         <div class="user-nav">
           <a class="header-bookmark" href="blank.html"><svg width="14" height="16" viewBox="0 0 14 16"
               fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,7 +283,7 @@
   <footer class="main-footer">
     <div class="container footer-main">
       <div class="footer-contacts">
-        <a class="logo footer-logo" href="index.html"><img width="136.5" height="21.6" src="img/footer-logo.svg"
+        <a class="logo footer-logo" href="index.html"><img width="137" height="22" src="img/footer-logo.svg"
             alt="Компания Техномарт"></a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <a href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -339,28 +346,28 @@
   <section class="modal modal-contact">
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="contact-name-email">
-          <label class="contact-description" for="name-contact">Ваше имя: <br>
+          <label class="contact-description" for="name-contact">Ваше имя:
             <input type="text" name="firstname" id="name-contact" placeholder="Имя Фамилия">
           </label>
-          <label class="contact-description" for="email-contact">Ваш e-mail: <br>
+          <label class="contact-description" for="email-contact">Ваш e-mail: 
             <input type="text" name="email" id="email-contact" placeholder="email@example.com">
           </label>
         </div>
-          <label class="contact-description" for="subject-contact">Текст письма: <br>
+          <label class="contact-description" for="subject-contact">Текст письма:
             <textarea class="contact-description text-area" id="subject-contact" name="subject" placeholder="В свободной форме" style="height:114px"></textarea>
           </label>
       </form>
       <div class="contact-submit-button">
-        <input class="modal-submit" type="submit" value="Отправить">
+        <button class="button modal-submit" type="submit">Отправить</button>
       </div>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
     <section class="modal modal-map">
-      <img src="../img/modal-map.png" width="943" height="449" alt="Адрес офиса Техномарт:ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <img src="img/modal-map.png" width="943" height="449" alt="Адрес офиса Техномарт:ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
-    
+
 </body>
 
 </html>

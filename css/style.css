@@ -126,12 +126,6 @@ a {
   margin-bottom: 21px;
 }
 
-.top-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .header-top {
   background-color: var(--basic-darker-grey);
   display: flex;
@@ -153,25 +147,98 @@ a {
   padding-bottom: 18px;
 }
 
+.top-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-and-search {
+  display: flex;
+  align-items: center;
+}
+
 .user-nav {
   display: flex;
   align-items: center;
 }
+
+/* Search Form */
+
+.search-form {
+  width: 270px;
+  position: relative;
+}
+
+.seacrh-label {
+  position: relative;
+  display: block;
+  color: var(--basic-white);
+}
+
+.search-label svg {
+  position: absolute;
+  top: 25%;
+  left: 10px;
+  transform: translate(-50%);
+  opacity: .3;
+  padding-left: 25px;
+}
+
+.search-input {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+  padding-left: 38px;
+  color: var(--basic-white);
+  background-color: transparent;
+  border: none;
+}
+
+.search-input::placeholder {
+  font-size: 18px;
+  color: var(--basic-white);
+  opacity: 1;
+}
+
+.search-label:hover svg {
+  opacity: 1;
+}
+
+.search-label:active svg {
+  opacity: .5;
+}
+
+.search-label:active .search-input::placeholder {
+  opacity: 0.7;
+}
+
+.search-input:focus {
+  font-size: 18px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border: none;
+  outline: none;
+}
+
+.search-input:focus path {
+  color: var(--basic-red);
+}
+
 
 /* Bookmark */
 
 .header-bookmark {
   background-color: var(--basic-darker-grey);
   border: none;
-  padding: 9px 24px 9px 43px;
+  padding: 9px 24px 9px 20px;
   display: inline-block;
 }
 
 /* Catalog Bookmark  */
-
-.catalog-bookmark {
-  
-}
 
 /* Bookmark Icon */
 
@@ -580,7 +647,7 @@ a {
   bottom: 10px;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .slider-control {
@@ -606,7 +673,7 @@ a {
   right: 0;
   display: flex;
   justify-content: space-between ;
-  z-index: 1;
+  /* z-index: 1; */
   bottom: 100px;
 }
 .slider-before {
@@ -1688,7 +1755,6 @@ a {
   bottom:0;
   left: 0;
   margin: 0 auto;
-  font-size: 13px;
   background-color: var(--basic-white);
 }
 
@@ -1696,21 +1762,22 @@ a {
 
 .modal-close {
   position: absolute;
-  top: 0;
-  right: -34px;
-  width: 22px;
-  height: 22px;
-  background-color:transparent;
+  top: 10px;
+  right: 11px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
   border: 0;
   cursor: pointer;
+  padding: 0;
 }
 
 .modal-close::before,
 .modal-close::after {
   content: "";
   position: absolute;
-  top: 20px;
-  right: 40px;
+  top: 10px;
+  right: 2px;
   width: 19px;
   height: 3px;
   background-color: var(--basic-red);
@@ -1728,9 +1795,11 @@ a {
 
 .modal-contact {
   /* display: none; */
-  top: 150px;
-  bottom: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 620px;
+  height: 430px;
   border-top: 7px solid var(--basic-red);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -1740,17 +1809,20 @@ a {
   margin: 46px 80px 37px 80px;
 }
 
+::placeholder {
+  font-size: 13px;
+  font-family: "PT Sans", "Arial", "san-serif";
+  color: var(--basic-price-grey);
+}
+
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
   box-sizing: border-box;
   width: 220px;
   padding: 7px 8px 7px 12px;
-  font: inherit;
-  color: var(--basic-price-grey);
   border: 2px solid var(--basic-hover-grey);
   border-radius: 2px;
   margin: 11px 0 13px 0;
-  font-size: 13px;
 }
 
 .contact-form input[type="text"] {
@@ -1764,13 +1836,15 @@ a {
 
 .text-area {
   width: 460px;
-  font-size: 13px;
-  color: var(--basic-price-grey);
   resize: none;
   border: 2px solid var(--basic-hover-grey);
   box-sizing: border-box;
   border-radius: 2px;
   margin-top: 11px;
+  font-family: "PT Sans", "Arial", "san-serif";
+  /* font-size: 18px;
+  line-height: 24px; */
+  padding: 7px 12px 7px 12px;
 }
 
 .contact-name-email {
@@ -1782,17 +1856,22 @@ a {
   background-color: var(--special-grey-submit);
 }
 
+.button {
+  text-transform: uppercase;
+  line-height: 18px;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  text-align:center;
+}
+
 .modal-submit {
   width: 460px;
   padding: 11px 0 9px 0;
-  background-color: var(--basic-red);
   color: var(--basic-white);
   display: block;
   border: none;
-  box-shadow: 0px, 4px 0px var(--basic-shadow-black);
   box-sizing: border-box;
-  text-align: center;
-  text-transform: uppercase;
+  font: inherit;
 }
 
 /* Modal Map  */
