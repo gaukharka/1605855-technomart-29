@@ -183,6 +183,7 @@ a {
   transform: translate(-50%);
   opacity: .3;
   padding-left: 25px;
+  color: var(--basic-white);
 }
 
 .search-input {
@@ -224,7 +225,7 @@ a {
   outline: none;
 }
 
-.search-input:focus path {
+.search-input:focus + svg {
   color: var(--basic-red);
 }
 
@@ -1748,14 +1749,13 @@ a {
 /* Modal */
 
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom:0;
-  left: 0;
-  margin: 0 auto;
+  /* display: none; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--basic-white);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Modal Close */
@@ -1794,14 +1794,11 @@ a {
 /* Modal Contact Form  */
 
 .modal-contact {
-  /* display: none; */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
+  position: fixed;
   width: 620px;
   height: 430px;
   border-top: 7px solid var(--basic-red);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form {
@@ -1817,6 +1814,7 @@ a {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
+  font-size: 13px;
   box-sizing: border-box;
   width: 220px;
   padding: 7px 8px 7px 12px;
@@ -1831,7 +1829,6 @@ a {
 
 .contact-description {
   font-size: 18px;
-  line-height: 24px;
 }
 
 .text-area {
@@ -1842,8 +1839,6 @@ a {
   border-radius: 2px;
   margin-top: 11px;
   font-family: "PT Sans", "Arial", "san-serif";
-  /* font-size: 18px;
-  line-height: 24px; */
   padding: 7px 12px 7px 12px;
 }
 
@@ -1866,7 +1861,7 @@ a {
 
 .modal-submit {
   width: 460px;
-  padding: 11px 0 9px 0;
+  padding: 11px 6px 9px 6px;
   color: var(--basic-white);
   display: block;
   border: none;
@@ -1878,14 +1873,10 @@ a {
 
 .modal-map {
   display: none;
-  top: 150px;
-  bottom: auto;
+  position: fixed;
   width: 943px;
   box-sizing: border-box;
   border-top: 7px solid var(--basic-red);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  padding: 0;
-  margin: 0 auto;
 }
 
 .modal-map img {
