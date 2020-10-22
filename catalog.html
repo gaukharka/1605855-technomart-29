@@ -13,11 +13,18 @@
   <header class="header">
     <div class="header-top">
       <div class="container top-header">
-        <a class="logo header-logo" href="index.html"><img width="107" height="17" src="img/header-logo.svg"
+        <div class="logo-and-search">
+          <a class="logo header-logo" href="index.html"><img width="107" height="17" src="img/header-logo.svg"
             alt="Компания Техномарт"></a>
-        <!-- <form action="#" method="POST">
-                <input type="search" placeholder="Поиск:">
-              </form> -->
+        <form class="search-form" action="#" method="POST">
+          <label class="search-label">
+            <input class="search-input" id="search-field" type="search" placeholder="Поиск:">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="currentColor"/>
+              </svg> 
+          </label>         
+        </form>
+        </div>
         <div class="user-nav">
           <a class="header-bookmark catalog-bookmark" href="blank.html"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +43,7 @@
       </div>
     </div>
     <div class="header-middle container">
-      <p class="slogan">Интернет-магазинстроительных материалови инструментов для ремонта</p>
+      <p class="slogan">Интернет-магазин строительных материалов и&nbspинструментов для ремонта</p>
       <div class="header-contacts">
         <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -94,8 +101,8 @@
       <div class="catalog-filter-goods">
         <div class="goods-filter">
           <p>ФИЛЬТР:</p>
-            <div>
-              <!-- <form encrypt="multipart/form-data" action="" method="POST">
+            <!-- <div>
+              <form encrypt="multipart/form-data" action="" method="POST">
                     <h3>ЦЕНА:</h3>
                     <input min="0" max="30000" step="">
                     <span>0</span>
@@ -110,8 +117,8 @@
                     <input type="radio" id="detail1" name="detail1" value="Accumulator" checked><label for="detail1">Аккумуляторные</label> 
                     <input type="radio" id="detail2" name="detail2" value="Network"><label for="detail2">Сетевые</label> 
                     <button type="submit">ПОКАЗАТЬ</button>
-            </form> -->
-            </div>
+            </form> 
+            </div> -->
         </div>
         <div class="catalog">
           <div class="goods-sorting">
@@ -351,6 +358,20 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-cart">
+    <form class="cart-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="cart-text">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+    </form>
+      <div class="modal-buttons">
+        <a class="button modal-cart-button" type="submit">оформить заказ</a>
+        <a class="modal-catalog-button" type="submit">продолжить покупки</a>
+      </div>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+
 </body>
 
 </html>
