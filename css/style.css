@@ -300,12 +300,6 @@ a {
   background-color: var(--basic-red);
 }
 
-/* Catalog Bookmark  */
-
-.catalog-bookmark {
-
-}
-
 /* Order */
 
 .header-order {
@@ -488,7 +482,6 @@ a {
 
 .materials {
   color: var(--basic-white);
-  /* grid */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
