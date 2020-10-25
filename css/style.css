@@ -1781,6 +1781,48 @@ a {
   background-position: 0 0;
 } */
 
+/* Radio Button */
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -43px;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--basic-hover-grey);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -36px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--basic-hover-grey);
+  border-radius: 50%;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: var(--special);
+}
+
+.filter-input:focus + label::before {
+  border-color: var(--basic-hover-grey);
+}
+
+.filter-input:disabled + label,
+.filter-input:checked:disabled + label,
+.filter-input:disabled:hover + label,
+.filter-input:disabled:focus + label {
+  color: var(--basic-black);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /* Sorting */
 
 .goods-catalog {
@@ -2021,7 +2063,7 @@ a {
   margin: 40px 80px 30px 80px;
 }
 
-.placeholder-text::placeholder  {
+.inner-text::placeholder  {
    font-size: 13px;
    line-height: 24px;
    font-family: "PT Sans", "Arial", "san-serif";
