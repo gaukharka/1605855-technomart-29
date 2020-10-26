@@ -1628,13 +1628,13 @@ a {
 }
 
 .filter fieldset:last-child {
-  margin-bottom: 34px;
+  margin-bottom: 0;
 }
 
 .filter legend {
-  margin-bottom: 15px;
   font-size: 17px;
   line-height: 30px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -1729,11 +1729,16 @@ a {
   font-size: 15px;
   font-family: "PT Sans", "Arial", "san-serif";
   text-transform: uppercase;
+  margin: 0;
 }
 
 .filter-option {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   padding-left: 35px;
+}
+
+.filter-option:last-child {
+  margin-bottom: 0;
 }
 
 .filter-option label {
@@ -1743,51 +1748,44 @@ a {
   user-select: none;
 }
 
-.filter-input-checkbox:focus {
-  color: var(--filter-hover-grey);
-}
-
-.filter-input-checkbox:hover + label {
-  color: var(--basic-black);
-  opacity: .4;
-}
-
-.filter-input-checkbox:focus + label {
-  color: var(--basic-blacky);
-  opacity: .4;
-}
-
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   top: -3px;
   left: -32px;
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
   border: 2px solid var(--basic-hover-grey);
   border-radius: 3px;
   box-sizing: border-box;
 }
 
-/* .filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: -38px;
-  width: 12px;
-  height: 12px;
+  top: 0;
+  left: -34px;
+  width: 20px;
+  height: 20px;
   background-image: url("..img/checked.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-} */
+}
+
 
 /* Radio Button */
+
+/*  poka neponyatno
+.filter-input-radio:focus + label {
+  color: var(--basic-black);
+  opacity: .5;
+} */
 
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: -43px;
   top: -2px;
+  left: -32px;
   width: 16px;
   height: 16px;
   border: 3px solid var(--basic-hover-grey);
@@ -1798,29 +1796,28 @@ a {
   content: "";
   position: absolute;
   top: 5px;
-  left: -36px;
+  left: -25px;
   width: 8px;
   height: 8px;
   background-color: var(--basic-hover-grey);
   border-radius: 50%;
 }
 
-.filter-input:hover + label,
-.filter-input:focus + label {
-  color: var(--special);
-}
 
-.filter-input:focus + label::before {
-  border-color: var(--basic-hover-grey);
-}
 
-.filter-input:disabled + label,
-.filter-input:checked:disabled + label,
-.filter-input:disabled:hover + label,
-.filter-input:disabled:focus + label {
+
+.filter-button {
+  width: 220px;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-button-grey);
   color: var(--basic-black);
-  opacity: 0.5;
-  pointer-events: none;
+}
+
+.filter-button:hover {
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-white);
 }
 
 /* Sorting */
