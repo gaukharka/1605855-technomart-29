@@ -1842,6 +1842,11 @@ a {
   opacity: 1;
 }
 
+input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+} 
+
 /* Radio Button */
 
 .filter-input-radio + label::before {
@@ -1875,6 +1880,11 @@ a {
 .filter-input-radio:hover + label::after {
   opacity: 1;
 }
+
+input[type="radio"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+} 
 
 .filter-input:disabled + label,
 .filter-input:checked:disabled + label,
