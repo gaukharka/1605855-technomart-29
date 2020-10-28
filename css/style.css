@@ -1439,7 +1439,7 @@ a {
 }
 
 .user-profile:active {
-  color: var(--special-hover-grey);
+  color: var(--basic-hover-grey);
 }
 
 /* User Profile Icon */
@@ -1651,10 +1651,6 @@ a {
   margin-bottom: 26px;
 }
 
-/* .filter legend:last-of-type {
-  margin-bottom: 21px;
-} */
-
 /* Filter section line */
 
 .filter .filter-item {
@@ -1679,7 +1675,7 @@ a {
 
 .range-controls {
   position: relative;
-  height: 41px;
+  height: 40px;
   max-width: 220px;
   max-width: 100%;
   background-color: var(--basic-light-rose);
@@ -1699,10 +1695,13 @@ a {
   background: #00ca74;
 }
 
+.scale {
+  position: relative;
+}
+
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
-  left: 0;
+  transform: translate(-50%, -50%);
   width: 4px;
   height: 4px;
   padding: 0;
@@ -1713,13 +1712,11 @@ a {
   cursor: pointer;
 }
 
-.range-controls .toggle-min {
-  left: 18px;
-}
-
-.range-controls .toggle-max {
+.scale .toggle-max {
   left: 160px;
 }
+
+/* Togle Price */
 
 .price-controls {
   display: flex;
@@ -1744,7 +1741,6 @@ a {
   font-size: 17px;
   line-height: 18px;
   color: var(--basic-black);
-
 }
 
 .price-controls .min-price {
@@ -1791,16 +1787,38 @@ a {
   user-select: none;
 }
 
+/* checkbox */
+
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   top: -3px;
   left: -33px;
-  width: 22px;
-  height: 22px;
-  border: 2px solid var(--basic-hover-grey);
-  border-radius: 3px;
-  box-sizing: border-box;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: .7;
+}
+
+.filter-input-checkbox:hover + label::before {
+  opacity: 1;
+}
+
+/* checkmark */
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -33px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkedbox.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: .7
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -1810,17 +1828,18 @@ a {
   left: -28px;
   width: 20px;
   height: 20px;
-  background-image: url("../img/checked.svg");
+  background-image: url("../img/checkmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: .7
 }
 
-.filter-input-checkbox:hover + label::before {
-  border: 2px solid var(--filter-hover-grey);
+.filter-input-checkbox:checked:hover + label::before {
+  opacity: 1;
 }
 
-.filter-input-checkbox:checked + label::after:hover svg {
-  border: 2px solid var(--filter-hover-grey);
+.filter-input-checkbox:checked:hover + label::after {
+  opacity: 1;
 }
 
 /* Radio Button */
@@ -1834,6 +1853,7 @@ a {
   height: 16px;
   border: 3px solid var(--basic-hover-grey);
   border-radius: 50%;
+  opacity: .7;
 }
 
 .filter-input-radio:checked + label::after {
@@ -1845,25 +1865,26 @@ a {
   height: 8px;
   background-color: var(--basic-hover-grey);
   border-radius: 50%;
+  opacity: .7;
 }
 
 .filter-input-radio:hover + label::before {
-  border: 3px solid var(--filter-hover-grey);
+  opacity: 1;
 }
 
 .filter-input-radio:hover + label::after {
-  background-color: var(--filter-hover-grey);
+  opacity: 1;
 }
 
 .filter-input:disabled + label,
 .filter-input:checked:disabled + label,
 .filter-input:disabled:hover + label,
 .filter-input:disabled:focus + label {
-  color: var(--filter-hover-grey);
-  border: 2px solid var(--filter-hover-grey);
-  opacity: 0.5;
+  opacity: 0.3;
   pointer-events: none;
 }
+
+/* Filter Button */
 
 .filter-button {
   font-family: "PT Sans", "Arial", "san-serif";
