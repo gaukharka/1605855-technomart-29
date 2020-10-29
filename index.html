@@ -344,8 +344,9 @@
   </footer>
 
   <section class="modal modal-contact">
-    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="contact-name-email">
+    <form  action="https://echo.htmlacademy.ru" method="post">
+      <div class="contact-form">
+        <div class="contact-name-email">
         <label class="contact-description" for="name-contact">Ваше имя:
           <input class="inner-text" type="text" name="firstname" id="name-contact" placeholder="Имя Фамилия">
         </label>
@@ -356,20 +357,20 @@
         <label class="contact-description" for="subject-contact">Текст письма:
           <textarea class="text-area" id="subject-contact" name="subject" placeholder="В свободной форме" style="height:114px"></textarea>
         </label>
+      </div>
+      <div class="modal-button">
+        <button class="modal-submit button " type="submit">Отправить</button>
+      </div>
     </form>
-    <div class="modal-button">
-      <button class="button modal-submit" type="submit">Отправить</button>
-    </div>
     <button class="modal-close close-contact" type="button" aria-label="Закрыть"></button>
   </section>
-
   <section class="modal modal-map">
     <img src="img/modal-map.png" width="943" height="449" alt="Адрес офиса Техномарт:ул. Большая Конюшенная 19/8, Санкт-Петербург">
     <button class="modal-close close-map" type="button" aria-label="закрыть модальное окно"></button>
   </section>
 
-<script src="contact.js"></script>
-<script src="map.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/map.js"></script>
 
 </body>
 

@@ -3,7 +3,7 @@ const contactPopup = document.querySelector(".modal-contact");
 const contactForm = contactPopup.querySelector(".contact-form");
 const contactClose = contactPopup.querySelector(".close-contact");
 const contactName = contactPopup.querySelector("#name-contact");
-const contactEmail = contactPopup.querySelector('#email-contact');
+const contactEmail = contactPopup.querySelector("#email-contact");
 
 
 

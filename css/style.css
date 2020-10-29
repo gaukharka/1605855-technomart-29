@@ -2175,7 +2175,7 @@ input[type="radio"]:focus + label::before {
   color: var(--basic-black);
   box-sizing: border-box;
   width: 220px;
-  padding: 9px 8px 9px 12px;
+  padding: 5px 8px 5px 12px;
   border: 2px solid var(--basic-hover-grey);
   border-radius: 2px;
   margin: 11px 0 13px 0;
@@ -2207,9 +2207,12 @@ input[type="radio"]:focus + label::before {
 }
 
 .modal-button {
-  padding: 36px 80px;
+  padding: 36px 0;
   background-color: var(--special-grey-submit);
-  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-submit {
@@ -2220,6 +2223,7 @@ input[type="radio"]:focus + label::before {
   border: none;
   box-sizing: border-box;
   font: inherit;
+  /* margin: 0 auto; */
 }
 
 /* Modal Map  */
@@ -2329,7 +2333,7 @@ input[type="radio"]:focus + label::before {
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translate(-50%, -50%) translateX(0);
   }
 
   10%,
@@ -2337,13 +2341,13 @@ input[type="radio"]:focus + label::before {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-50%, -50%) translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-50%, -50%) translateX(10px);
   }
 }
