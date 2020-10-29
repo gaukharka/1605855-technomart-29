@@ -2095,13 +2095,23 @@ input[type="radio"]:focus + label::before {
 /* Modal */
 
 .modal {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
+  margin: 0 auto;
   transform: translate(-50%, -50%);
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 /* Modal Close */
@@ -2140,7 +2150,6 @@ input[type="radio"]:focus + label::before {
 /* Modal Contact Form  */
 
 .modal-contact {
-  display: none;
   position: fixed;
   width: 620px;
   border-top: 7px solid var(--basic-red);
@@ -2163,7 +2172,7 @@ input[type="radio"]:focus + label::before {
   font-size: 13px;
   font-family: "PT Sans", "Arial", "san-serif";
   line-height: 24px;
-  color: var(--basic-price-grey);
+  color: var(--basic-black);
   box-sizing: border-box;
   width: 220px;
   padding: 9px 8px 9px 12px;
@@ -2188,7 +2197,7 @@ input[type="radio"]:focus + label::before {
   border-radius: 2px;
   margin-top: 9px;
   font-family: "PT Sans", "Arial", "san-serif";
-  color: var(--basic-price-grey);
+  color: var(--basic-black);
   line-height: 24px;
   padding: 7px 12px 7px 12px;
 }
@@ -2216,7 +2225,7 @@ input[type="radio"]:focus + label::before {
 /* Modal Map  */
 
 .modal-map {
-  display: none;
+  /* display: none; */
   position: fixed;
   width: 943px;
   box-sizing: border-box;
@@ -2294,4 +2303,47 @@ input[type="radio"]:focus + label::before {
   padding: 45px 80px;
   background-color: var(--special-grey-submit);
   text-align: center;
+}
+
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) translateY(-1000px);
+  }
+
+  70% {
+    transform: translate(-50%, -50%) translateY(30px);
+  }
+  
+  90% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
