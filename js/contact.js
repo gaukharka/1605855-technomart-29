@@ -1,9 +1,10 @@
 const contactLink = document.querySelector(".button-contact");
 const contactPopup = document.querySelector(".modal-contact");
-const contactForm = contactPopup.querySelector(".contact-form");
+const contactForm = contactPopup.querySelector(".modal-form");
 const contactClose = contactPopup.querySelector(".close-contact");
 const contactName = contactPopup.querySelector("#name-contact");
 const contactEmail = contactPopup.querySelector("#email-contact");
+const contactMessage = contactPopup.querySelector("#subject-contact")
 
 
 
@@ -32,7 +33,7 @@ contactClose.addEventListener("click", function (evt) {
 
 
 contactForm.addEventListener("submit", function (evt) {
-  if (!contactName.value || !contactEmail.value) {
+  if ((!contactName.value || !contactEmail.value || !contactMessage.value)) {
     evt.preventDefault();
     contactPopup.classList.add("modal-error");
   } else {
@@ -42,7 +43,6 @@ contactForm.addEventListener("submit", function (evt) {
     }
   }
 });
-
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {

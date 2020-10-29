@@ -2243,7 +2243,7 @@ input[type="radio"]:focus + label::before {
 /* Modal Catalog Cart */
 
 .modal-cart {
-  display: none;
+  /* display: none; */
   position: fixed;
   width: 620px;
   height: 282px;
