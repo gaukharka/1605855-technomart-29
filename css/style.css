@@ -2236,7 +2236,12 @@ input[type="radio"]:focus + label::before {
   border-top: 7px solid var(--basic-red);
 }
 
-.modal-map img {
+/* .modal-map img {
+  display: block;
+} */
+
+.modal-map iframe {
+  border: none;
   display: block;
 }
 
