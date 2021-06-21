@@ -1,3 +1,5 @@
-## Technomart - a simple landing page of an online store.
+## Technomart 
+a simple landing page of an online store.
 
-## HTML, CSS, JS
+## Stacks used
+HTML, CSS, JS
